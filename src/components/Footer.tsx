@@ -1,54 +1,44 @@
 import { motion } from "framer-motion";
-import { Github, Twitter, Instagram } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="bg-primary text-primary-foreground pt-32 pb-12">
-      <div className="container mx-auto px-6">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-16 mb-24">
-          <div className="md:col-span-6">
-            <h2 className="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-8 leading-none">
-              Stay <br />
-              <span className="text-accent">Calibrated</span>
-            </h2>
-            <div className="flex gap-4">
-              <input 
-                type="email" 
-                placeholder="LAB@SYSTEM.INT" 
-                className="bg-transparent border-b border-primary-foreground/30 py-4 w-full focus:outline-none focus:border-accent font-mono uppercase text-sm"
-              />
-              <button className="border border-primary-foreground/30 px-8 hover:bg-accent hover:border-accent transition-colors uppercase font-bold text-xs tracking-widest">
-                Join
-              </button>
+    <footer className="bg-background border-t-8 border-primary py-20 px-6">
+      <div className="max-w-[1440px] mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+          <div className="col-span-1 md:col-span-2">
+            <div className="text-4xl font-black uppercase tracking-tighter mb-8">
+              KRAFT<span className="text-accent">WERK</span>
             </div>
+            <p className="text-muted-foreground uppercase text-sm font-bold tracking-widest max-w-sm">
+              Modular industrial design for high-performance environments. Berlin / Kreuzberg 2024.
+            </p>
           </div>
-
-          <div className="md:col-span-3 flex flex-col gap-6 uppercase text-xs tracking-widest">
-            <span className="text-primary-foreground/40 font-bold">Contact</span>
-            <p className="font-bold">Wilhelmstraße 43<br />10117 Berlin, DE</p>
-            <p className="font-bold">+49 30 2000 000</p>
-            <p className="font-bold text-accent">nexus@kruft.lab</p>
+          
+          <div>
+            <h5 className="font-black uppercase mb-6 tracking-widest text-accent">Navigation</h5>
+            <ul className="space-y-4 text-sm font-bold uppercase tracking-wider">
+              <li><a href="#" className="hover:text-accent transition-colors">Core Systems</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Documentation</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Safety Protocols</a></li>
+              <li><a href="#" className="hover:text-accent transition-colors">Archive</a></li>
+            </ul>
           </div>
-
-          <div className="md:col-span-3 flex flex-col gap-6 uppercase text-xs tracking-widest">
-            <span className="text-primary-foreground/40 font-bold">Follow</span>
-            <div className="flex gap-8">
-              <a href="#" className="hover:text-accent transition-colors"><Twitter size={20} /></a>
-              <a href="#" className="hover:text-accent transition-colors"><Instagram size={20} /></a>
-              <a href="#" className="hover:text-accent transition-colors"><Github size={20} /></a>
-            </div>
-            <div className="mt-auto">
-              <p className="text-[10px] text-primary-foreground/30">KRUFT-OS VERSION 4.2.0-STABLE</p>
-            </div>
+          
+          <div>
+            <h5 className="font-black uppercase mb-6 tracking-widest text-accent">Contact</h5>
+            <ul className="space-y-4 text-sm font-bold uppercase tracking-wider">
+              <li>LAB-04 @ BERLIN</li>
+              <li>COMMMS@KRAFTWERK.IO</li>
+              <li>+49 30 000 000</li>
+            </ul>
           </div>
         </div>
-
-        <div className="pt-12 border-t border-primary-foreground/10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] font-mono uppercase tracking-[0.3em] text-primary-foreground/40">
-          <span>© 2024 KRUFT RESEARCH LAB</span>
+        
+        <div className="pt-12 border-t border-border flex flex-col md:flex-row justify-between items-center gap-6 font-mono text-[10px] uppercase tracking-[0.3em] text-muted-foreground">
+          <div>© 2024 KRAFTWERK Bauhaus Laboratory. All rights reserved.</div>
           <div className="flex gap-8">
-            <a href="#" className="hover:text-primary-foreground transition-colors">Privacy Protocol</a>
-            <a href="#" className="hover:text-primary-foreground transition-colors">Safety Specs</a>
-            <a href="#" className="hover:text-primary-foreground transition-colors">Legal Chassis</a>
+            <a href="#" className="hover:text-white">Privacy / Impressum</a>
+            <a href="#" className="hover:text-white">Security Specs</a>
           </div>
         </div>
       </div>
