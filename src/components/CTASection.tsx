@@ -1,30 +1,33 @@
-import { motion } from "framer-motion";
-import { Orb } from "@/components/ui/orb";
+import { motion } from 'framer-motion';
+import { Orb } from '@/components/ui/orb';
 
 export function CTASection() {
   return (
-    <section className="py-40 relative bg-primary overflow-hidden">
-      <Orb className="top-0 right-0 -translate-y-1/2 translate-x-1/2 opacity-30" />
+    <section className="py-48 px-6 lg:px-12 relative overflow-hidden bg-primary text-background">
+      <Orb className="-bottom-40 -right-40 opacity-30" color="hsl(var(--accent))" />
       
-      <div className="max-w-[1440px] mx-auto px-6 relative z-10 text-center">
+      <div className="max-w-[1400px] mx-auto text-center relative z-10">
         <motion.div
-          initial={{ scale: 0.9, opacity: 0 }}
-          whileInView={{ scale: 1, opacity: 1 }}
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-7xl md:text-9xl font-black uppercase tracking-tighter mb-12">
-            JOIN THE <span className="text-accent italic">LAB</span>
+          <h2 className="text-6xl md:text-9xl font-black uppercase tracking-tighter mb-12">
+            Join the<br />Collective
           </h2>
-          <p className="text-xl text-muted-foreground uppercase tracking-widest max-w-2xl mx-auto mb-16 font-bold">
-            Apply for modular testing or request system documentation for your facility.
+          <p className="max-w-2xl mx-auto text-xl mb-16 opacity-70 font-medium uppercase tracking-tight">
+            Apply for laboratory access and receive experimental updates from the Berlin studio.
           </p>
           
-          <div className="flex flex-col md:flex-row gap-6 justify-center items-center">
-            <button className="w-full md:w-auto px-16 py-6 bg-accent text-white font-black uppercase tracking-widest text-lg hover:scale-105 transition-transform">
-              Apply Now
-            </button>
-            <button className="w-full md:w-auto px-16 py-6 border-4 border-white text-white font-black uppercase tracking-widest text-lg hover:bg-white hover:text-black transition-all">
-              Documentation
+          <div className="flex flex-col md:flex-row gap-4 justify-center max-w-xl mx-auto">
+            <input 
+              type="email" 
+              placeholder="ENTER_EMAIL_ADDRESS"
+              className="bg-transparent border-2 border-background/20 px-8 py-5 text-xl font-bold focus:border-accent outline-none flex-grow"
+            />
+            <button className="bg-accent text-white px-12 py-5 text-xl font-black uppercase hover:bg-white hover:text-accent transition-all">
+              Initiate
             </button>
           </div>
         </motion.div>

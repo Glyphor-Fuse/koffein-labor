@@ -2,21 +2,23 @@
 
 import { Header } from "@/components/Header";
 import { HeroSection } from "@/components/HeroSection";
-import { GridSystem } from "@/components/GridSystem";
-import { FeatureGrid } from "@/components/FeatureGrid";
+import { LaboratorySection } from "@/components/LaboratorySection";
 import { CTASection } from "@/components/CTASection";
 import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <main className="min-h-screen bg-background text-foreground font-sans selection:bg-accent selection:text-white">
+    <div className="min-h-screen bg-background selection:bg-accent selection:text-white overflow-x-hidden">
       <Header />
-      <HeroSection />
-      <GridSystem />
-      <FeatureGrid />
-      <CTASection />
+      <main>
+        <HeroSection />
+        <div className="h-px w-full bg-border" />
+        <LaboratorySection />
+        <div className="h-px w-full bg-border" />
+        <CTASection />
+      </main>
       <Footer />
-    </main>
+    </div>
   );
 };
 
